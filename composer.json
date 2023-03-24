@@ -1,0 +1,26 @@
+{
+    "name": "alexanevsky/output-normalizer-bundle",
+    "type": "symfony-bundle",
+    "description": "Provides functions which allows to flexibly customize the output of objects and entities to an array or JSON by defining normalization rules in classes.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Lashchevsky",
+            "email": "alexander@lashchevsky.me"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "alexanevsky/getter-setter-accessor-bundle": "^1.0",
+        "doctrine/orm": "^2.6",
+        "symfony/config": "^5.4|^6.0",
+        "symfony/dependency-injection": "^5.4|^6.0",
+        "symfony/http-kernel": "^5.4|^6.0",
+        "symfony/string": "^5.4|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alexanevsky\\OutputNormalizerBundle\\": "src"
+        }
+    }
+}
