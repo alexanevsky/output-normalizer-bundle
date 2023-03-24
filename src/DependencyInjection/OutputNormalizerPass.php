@@ -13,7 +13,7 @@ class OutputNormalizerPass implements CompilerPassInterface
             ->getDefinition('alexanevsky.output_normalizer.object_normalizer')
             ->setPublic(true);
 
-            $containerBuilder
+        $containerBuilder
             ->getDefinition('alexanevsky.output_normalizer.output_modifier')
             ->setPublic(true);
     }
