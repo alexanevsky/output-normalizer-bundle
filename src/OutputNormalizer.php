@@ -65,7 +65,15 @@ class OutputNormalizer
         }
 
         if ($object instanceof \JsonSerializable) {
-            return $object->jsonSerialize();
+            $serializedObject = $object->jsonSerialize();
+
+            if (is_array($serializedObject)) {
+                foreach ($serializedObject as $k => $v) {
+                    $serializedObject[$k] = $this->normalize($v);
+                }
+            }
+
+            return $serializedObject;
         } elseif ($object instanceof Collection) {
             return [];
         }
